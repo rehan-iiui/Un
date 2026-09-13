@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="game">
+
+    <header class="topbar">
+      <div>
+        <h1>UNO</h1>
+        <p>Classic Card Game</p>
+      </div>
+
+      <div class="score">
+        <span>Computer: <b id="computerScore">0</b></span>
+        <span>You: <b id="playerScore">0</b></span>
+      </div>
+    </header>
+
+    <main class="table">
+
+      <section class="computer-area">
+        <h2>Computer</h2>
+        <div id="computerCards" class="card-row"></div>
+      </section>
+
+      <section class="center-area">
+
+        <div class="turn-message" id="turnMessage">
+          Your turn
+        </div>
+
+        <div class="piles">
+
+          <div class="draw-pile" id="drawPile">
+            <div class="uno-back">UNO</div>
+          </div>
+
+          <div class="discard-pile" id="discardPile"></div>
+
+        </div>
+
+        <div class="controls">
+          <button id="drawButton">Draw Card</button>
+          <button id="unoButton">UNO!</button>
+          <button id="newGameButton">New Game</button>
+        </div>
+
+      </section>
+
+      <section class="player-area">
+        <h2>Your Cards</h2>
+        <div id="playerCards" class="player-cards"></div>
+      </section>
+
+    </main>
+
+    <div id="colorModal" class="modal hidden">
+      <div class="modal-box">
+        <h2>Choose a Color</h2>
+
+        <div class="color-buttons">
+          <button class="choose-color red" data-color="red">Red</button>
+          <button class="choose-color yellow" data-color="yellow">Yellow</button>
+          <button class="choose-color green" data-color="green">Green</button>
+          <button class="choose-color blue" data-color="blue">Blue</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="winModal" class="modal hidden">
+      <div class="modal-box">
+        <h2 id="winTitle">You Win!</h2>
+        <p id="winText"></p>
+        <button id="playAgainButton">Play Again</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
